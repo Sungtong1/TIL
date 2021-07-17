@@ -1,2 +1,2 @@
-# Git Mannual
+# Git Manual by Visual Studio
 
