@@ -2,7 +2,7 @@
 
 #### ⭐ 하루에 3개씩 !
 
-
+[내장함수](https://docs.python.org/3/library/functions.html)
 
 ### 1. abs(x)
 
@@ -116,5 +116,46 @@ print(a, b, c)
   any(()) : False
   ```
 
-  
+
+
+
+### 4. bin(x)
+
+- Convert an integer number to a binary string prefixed with “0b”. The result is a valid Python expression. If *x* is not a Python `int`) object, it has to define an `__index__()`method that returns an integer. Some examples:
+  - 정수를 《0b》 가 앞에 붙은 이진 문자열로 변환합니다. 결과는 올바른 파이썬 표현식입니다. *x* 가 파이썬 `int` 객체가 아니라면, 정수를 돌려주는 `__index__()` 메서드를 정의해야 합니다. 몇 가지 예를 들면:
+
+```python'
+bin(3)
+'0b11'
+bin(-10)
+'-0b1010'
+```
+
+​	접두어 `0b`가 필요하다면 2번째 인자로 `'#b'` 필요하지 않다면 `'b'` 를 입력한다.
+
+```
+⭐format(14, '#b'), format(14, 'b')
+('0b1110', '1110')
+f'{14:#b}', f'{14:b}'
+('0b1110', '1110')
+```
+
+
+
+### 5. *class* list([iterable])
+
+- Rather than being a function, `list` is actually a mutable sequence type, as documented in [Lists](https://docs.python.org/3/library/stdtypes.html#typesseq-list) and [Sequence Types — list, tuple, range](https://docs.python.org/3/library/stdtypes.html#typesseq).
+  - 함수이기보다, [리스트](https://docs.python.org/ko/3/library/stdtypes.html#typesseq-list) 와 [시퀀스 형 — list, tuple, range](https://docs.python.org/ko/3/library/stdtypes.html#typesseq) 에 문서화 된 것처럼, `list` 는 실제로는 가변 시퀀스 형입니다.
+
+
+
+### 6. *class* set([iterable])
+
+- Return a new [`set`] object, optionally with elements taken from *iterable*. `set` is a built-in class. See [`set`] and [Set Types — set, frozenset] for documentation about this class.
+
+  For other containers see the built-in [`frozenset`], [`list`], [`tuple`], and [`dict`] classes, as well as the `collections`
+
+  - 새 `set` 객체를 돌려줍니다. 선택적으로 *iterable* 에서 가져온 요소를 갖습니다. `set` 은 내장 클래스입니다. 이 클래스에 대한 설명서는 `set`및 [집합 형 — set, frozenset] 을 보세요.
+
+    다른 컨테이너의 경우 내장 `frozenset`, `list`, `tuple` 및 `dict`) 클래스와 `collections` 모듈을 보세요.
 
