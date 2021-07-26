@@ -157,5 +157,43 @@ f'{14:#b}', f'{14:b}'
 
   - 새 `set` 객체를 돌려줍니다. 선택적으로 *iterable* 에서 가져온 요소를 갖습니다. `set` 은 내장 클래스입니다. 이 클래스에 대한 설명서는 `set`및 [집합 형 — set, frozenset] 을 보세요.
 
-    다른 컨테이너의 경우 내장 `frozenset`, `list`, `tuple` 및 `dict`) 클래스와 `collections` 모듈을 보세요.
+    다른 컨테이너의 경우 내장 `frozenset`, `list`, `tuple` 및 `dict`) 클래스와 `collections` 모듈을 보세요
+
+### 7.  sum(iterable,/,start=0)
+
+- Sums *start* and the items of an *iterable* from left to right and returns the total. The *iterable*’s items are normally numbers, and the start value is not allowed to be a string.
+
+  For some use cases, there are good alternatives to `sum()`. The preferred, fast way to concatenate a sequence of strings is by calling `''.join(sequence)`. To add floating point values with extended precision, see `math.fsum()`. To concatenate a series of iterables, consider using `itertools.chain()`.
+
+  - *start* 및 *iterable* 의 항목들을 왼쪽에서 오른쪽으로 합하고 합계를 돌려줍니다. *iterable* 의 항목은 일반적으로 숫자며 시작 값은 문자열이 될 수 없습니다.
+
+    어떤 경우에는 `sum()`에 대한 좋은 대안이 있습니다. 문자열의 시퀀스를 연결하는 가장 선호되고 빠른 방법은 `''.join(sequence)` 를 호출하는 것입니다. 확장된 정밀도로 부동 소수점 값을 더하려면 `math.fsum()` 를 보세요. 일련의 이터러블들을 연결하려면 `itertools.chain()` 를 고려해보세요.
+
+
+### 8. round(number[, ndigits])
+
+- Return *number* rounded to *ndigits* precision after the decimal point. If *ndigits* is omitted or is `None`, it returns the nearest integer to its input.
+
+  For the built-in types supporting [`round()`](https://docs.python.org/3/library/functions.html#round), values are rounded to the closest multiple of 10 to the power minus *ndigits*; if two multiples are equally close, rounding is done toward the even choice (so, for example, both `round(0.5)` and `round(-0.5)` are `0`, and `round(1.5)` is `2`). Any integer value is valid for *ndigits* (positive, zero, or negative). The return value is an integer if *ndigits* is omitted or `None`. Otherwise the return value has the same type as *number*.
+
+  For a general Python object `number`, `round` delegates to `number.__round__`.
+
+  ```
+  NOTE : The behavior of round() for floats can be surprising: for example, round(2.675, 2) gives 2.67 instead of the expected 2.68. This is not a bug: it’s a result of the fact that most decimal fractions can’t be represented exactly as a float. See Floating Point Arithmetic: Issues and Limitations for more information. 
+  ```
+
+  - *number* 를 소수점 다음에 *ndigits* 정밀도로 반올림한 값을 돌려줍니다. *ndigits* 가 생략되거나 `None` 이면, 입력에 가장 가까운 정수를 돌려줍니다.
+
+    [`round()`](https://docs.python.org/ko/3/library/functions.html#round) 를 지원하는 내장형의 경우, 값은 10의 *-ndigits* 거듭제곱의 가장 가까운 배수로 반올림됩니다; 두 배수가 똑같이 가깝다면, 반올림은 짝수를 선택합니다 (예를 들어, `round(0.5)` 와 `round(-0.5)` 는 모두 `0` 이고, `round(1.5)` 는 `2` 입니다). 모든 정숫값은 *ndigits* 에 유효합니다 (양수, 0 또는 음수). *ndigits* 가 생략되거나 `None` 이면, 반환 값은 정수입니다. 그렇지 않으면 반환 값은 *number* 와 같은 형입니다.
+
+    일반적인 파이썬 객체 `number` 의 경우, `round` 는 `number.__round__` 에 위임합니다.
+
+    ```
+    참고 : float에 대한 round() 의 동작은 예상과 다를 수 있습니다: 예를 들어, round(2.675, 2) 는 2.68 대신에 2.67 을 제공합니다. 이것은 버그가 아닙니다: 대부분의 십진 소수가 float로 정확히 표현될 수 없다는 사실로부터 오는 결과입니다. 자세한 정보는 부동 소수점 산술: 문제점 및 한계 를 보세요.
+    ```
+
+### 9. reversed(seq)
+
+- Return a reverse iterator. *seq* must be an object which has a `__reversed__()`) method or supports the sequence protocol (the `__len__()` method and the `__getitem__()` method with integer arguments starting at `0`).
+  - 역 이터레이터 를 돌려줍니다. *seq* 는 `__reversed__()` 메서드를 가졌거나 시퀀스 프로토콜`__len__()` 메서드와 `0` 에서 시작하는 정수 인자를 받는 `__getitem__()` 메서드)을 지원하는 객체여야 합니다.
 
