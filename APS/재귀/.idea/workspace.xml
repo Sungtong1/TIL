@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27c3fc13-a119-4009-833c-8ec54bafaf94" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../순열,조합,부분집합/순열.py" beforeDir="false" afterPath="$PROJECT_DIR$/../순열,조합,부분집합/순열.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../브루트포스/덩치.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../순열,조합,부분집합/순열복습.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../순열,조합,부분집합/체스판 다시 칠하기.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../브루트포스/분해합.py" beforeDir="false" afterPath="$PROJECT_DIR$/../브루트포스/분해합.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
