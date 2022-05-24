@@ -15,5 +15,4 @@ for i in range(len(result[0])):
         answer += result[0][i]
     else:
         answer += '?'
-
 print(answer)
